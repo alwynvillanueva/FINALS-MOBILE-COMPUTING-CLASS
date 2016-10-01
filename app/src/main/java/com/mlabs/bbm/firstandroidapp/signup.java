@@ -1,14 +1,11 @@
 package com.mlabs.bbm.firstandroidapp;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,9 +30,9 @@ public class signup extends AppCompatActivity implements android.view.View.OnCli
         fname = (TextView) findViewById(R.id.fname);
         lname = (TextView) findViewById(R.id.lname);
         uname = (TextView) findViewById(R.id.uname);
-        email = (TextView) findViewById(R.id.editText3);
-        password = (TextView) findViewById(R.id.editText4);
-        confirmpass = (TextView) findViewById(R.id.editText5);
+        email = (TextView) findViewById(R.id.email);
+        password = (TextView) findViewById(R.id.password);
+        confirmpass = (TextView) findViewById(R.id.confirmpass);
         create = (Button) findViewById(R.id.button3);
 
         create.setOnClickListener(this);

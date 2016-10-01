@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                                          boolean res = false;
                                          res = repo.validateLogin(Email.getText().toString(), Password.getText().toString());
                                          if(res == true){
+                                             //this is for avoiding back button or no history
+                                             finish();
                                              Intent intent = new Intent(MainActivity.this, blankAct.class);
                                              startActivity(intent);}
                                          else  {
@@ -94,15 +96,15 @@ public class MainActivity extends AppCompatActivity {
 
                                           Intent intent = new Intent(MainActivity.this, signup.class);
                                           startActivity(intent);
+                                          Email.setText("");
+                                          Password.setText("");
                                       }
 
 
                                   }
         );
     }
-    protected  void onPause(){
-        super.onPause();
-        finish();
-    }
+
+
 }
 
